@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Échéances micro-entrepreneur : facturation électronique et revenu net</title>
+  <meta name="description" content="Outil gratuit pour les micro-entrepreneurs : quelles échéances de facturation électronique vous concernent, et combien il vous reste après cotisations.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <p class="kicker">Outil gratuit pour micro-entrepreneurs</p>
+    <h1>Échéances et revenu net de votre micro-entreprise</h1>
+    <p class="lead">Deux outils simples : vos échéances de facturation électronique, puis une estimation de ce qu'il vous reste après cotisations.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="disclaimer" role="note">
+    <p><strong>Outil d'information générale.</strong> Il ne constitue pas un conseil juridique, fiscal ou comptable. Les règles évoluent : vérifiez les chiffres sur service-public.fr, impots.gouv.fr et urssaf.fr. Vous restez responsable de la vérification pour votre situation.</p>
+  </div>
+
+  <!-- ======================= SECTION 1 ======================= -->
+  <section id="facturation" class="panel" aria-labelledby="titre-facturation">
+    <h2 id="titre-facturation">Facturation électronique : quelles échéances pour moi ?</h2>
+    <p class="muted">Trois questions. Chaque résultat renvoie à sa source officielle.</p>
+
+    <form id="einvoice-form" novalidate>
+      <fieldset>
+        <legend>1. Êtes-vous micro-entrepreneur(e) ?</legend>
+        <label class="choice"><input type="radio" name="micro" value="oui"> Oui</label>
+        <label class="choice"><input type="radio" name="micro" value="non"> Non, autre statut</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. Facturez-vous la TVA ?</legend>
+        <label class="choice"><input type="radio" name="tva" value="assujetti"> Oui, je facture la TVA</label>
+        <label class="choice"><input type="radio" name="tva" value="franchise"> Non, franchise en base de TVA</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>3. Qui sont vos clients ?</legend>
+        <label class="choice"><input type="radio" name="clients" value="b2b"> Surtout des entreprises (B2B)</label>
+        <label class="choice"><input type="radio" name="clients" value="b2c"> Surtout des particuliers (B2C)</label>
+        <label class="choice"><input type="radio" name="clients" value="both"> Les deux</label>
+      </fieldset>
+    </form>
+
+    <div id="einvoice-results" class="results" aria-live="polite">
+      <p class="muted">Répondez aux trois questions pour voir vos échéances.</p>
+    </div>
+  </section>
+
+  <!-- ======================= SECTION 2 ======================= -->
+  <section id="simulateur" class="panel" aria-labelledby="titre-simulateur">
+    <h2 id="titre-simulateur">Simulateur de revenu net micro-entrepreneur</h2>
+    <p class="muted">Estimation pour l'année, à partir de votre chiffre d'affaires (CA) hors taxes. Taux 2026, voir la liste des limites plus bas.</p>
+
+    <form id="sim-form" novalidate>
+      <div class="grid">
+        <label class="field">
+          <span>Type d'activité</span>
+          <select name="activity">
+            <option value="vente">Vente de marchandises (BIC)</option>
+            <option value="services" selected>Prestations de services (BIC)</option>
+            <option value="bnc">Prestations non commerciales (BNC, SSI)</option>
+            <option value="cipav">Profession libérale réglementée (CIPAV)</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Chiffre d'affaires</span>
+          <div class="inline">
+            <input type="number" name="amount" min="0" step="100" inputmode="decimal" placeholder="ex. 24000" aria-describedby="ca-help">
+            <select name="period" aria-label="Période du chiffre d'affaires">
+              <option value="an" selected>par an</option>
+              <option value="mois">par mois</option>
+            </select>
+          </div>
+          <small id="ca-help">Montant HT, hors TVA.</small>
+        </label>
+      </div>
+
+      <div class="grid">
+        <fieldset>
+          <legend>Versement libératoire de l'impôt sur le revenu ?</legend>
+          <label class="choice"><input type="radio" name="vfl" value="non" checked> Non</label>
+          <label class="choice"><input type="radio" name="vfl" value="oui"> Oui</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>ACRE (aide à la création) ?</legend>
+          <label class="choice"><input type="radio" name="acre" value="non" checked> Non</label>
+          <label class="choice"><input type="radio" name="acre" value="avant"> Oui, activité débutée avant le 1er juillet 2026</label>
+          <label class="choice"><input type="radio" name="acre" value="apres"> Oui, activité débutée à partir du 1er juillet 2026</label>
+        </fieldset>
+      </div>
+    </form>
+
+    <div id="sim-results" class="results" aria-live="polite">
+      <p class="muted">Saisissez votre chiffre d'affaires pour voir l'estimation.</p>
+    </div>
+  </section>
+
+  <!-- ======================= CTA ======================= -->
+  <aside class="cta" aria-label="Suite de l'outil">
+    <p>Un tableur de suivi (CA, cotisations, plafonds) est en préparation.</p>
+  </aside>
+
+  <!-- ======================= SOURCES ======================= -->
+  <section class="panel small" aria-labelledby="titre-sources">
+    <h2 id="titre-sources">Sources officielles</h2>
+    <ul>
+      <li><a href="https://www.impots.gouv.fr/professionnel/je-decouvre-la-facturation-electronique">impots.gouv.fr : je découvre la facturation électronique</a></li>
+      <li><a href="https://entreprendre.service-public.gouv.fr/vosdroits/F23267">service-public.fr : régime micro-entrepreneur (plafonds, versement libératoire)</a></li>
+      <li><a href="https://entreprendre.service-public.gouv.fr/vosdroits/F21746">service-public.fr : franchise en base de TVA (seuils)</a></li>
+      <li><a href="https://www.urssaf.fr">urssaf.fr : cotisations et taux</a></li>
+    </ul>
+    <p class="muted">Dernière vérification des taux : 18 octobre 2026. Chaque valeur a été vérifiée sur la page officielle citée.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Sans publicité, sans cookie et sans compte. Les calculs se font dans votre navigateur. Mesure d'audience anonyme avec GoatCounter.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script data-goatcounter="https://micro-echeances.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
