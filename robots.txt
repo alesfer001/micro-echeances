@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alesfer001.github.io/micro-echeances/sitemap.xml

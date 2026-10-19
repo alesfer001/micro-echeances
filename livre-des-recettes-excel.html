@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Livre des recettes sur Excel : guide micro-entrepreneur</title>
+  <meta name="description" content="Tenir son livre des recettes sur Excel en micro-entreprise : mentions obligatoires, exemple de tableau, formules de total, registre des achats et durée de conservation.">
+  <link rel="canonical" href="https://alesfer001.github.io/micro-echeances/livre-des-recettes-excel.html">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .guide .panel h2 { margin-top: 4px; }
+    .guide .panel h3 { font-size: 1.05rem; margin: 18px 0 6px; }
+    .guide .panel p, .guide .panel li { font-size: 1rem; }
+    .guide .panel ul, .guide .panel ol { padding-left: 1.2rem; }
+    .guide .panel li { margin: 4px 0; }
+    .guide table.ex { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: .92rem; }
+    .guide table.ex th, .guide table.ex td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .guide table.ex th { font-weight: 600; background: var(--accent-soft); }
+    .guide table.ex td.num { text-align: right; white-space: nowrap; }
+    .guide code { background: #f0f3f8; padding: 1px 4px; border-radius: 4px; font-size: .92em; word-break: break-word; }
+    .guide pre { background: #f0f3f8; padding: 10px 12px; border-radius: 8px; overflow-x: auto; font-size: .92rem; }
+  </style>
+</head>
+<body class="guide">
+
+<header class="site-header">
+  <div class="wrap">
+    <p class="kicker">Guide pour micro-entrepreneurs</p>
+    <h1>Tenir son livre des recettes sur Excel (micro-entrepreneur)</h1>
+    <p class="lead">Les mentions exigées, un exemple de tableau, une méthode gratuite dans Excel et les erreurs à éviter.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="disclaimer" role="note">
+    <p><strong>Information, pas un conseil juridique.</strong> Ce guide résume les règles publiées sur service-public.fr. Vérifiez-les pour votre situation, et demandez à un expert-comptable si vous avez un doute. Cet outil n'est pas édité, validé ni affilié à l'URSSAF, à l'administration fiscale ou à l'État.</p>
+  </div>
+
+  <section class="panel" aria-labelledby="intro">
+    <h2 id="intro">Le livre des recettes, en bref</h2>
+    <p>Le livre des recettes est le registre où vous notez, dans l'ordre, les sommes que vous avez encaissées dans le cadre de votre activité. Il peut être tenu sur papier, avec un logiciel ou sous forme électronique. Un tableur comme Excel peut donc servir à le tenir, à condition de garder les informations exigées par la loi.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="qui">
+    <h2 id="qui">Qui doit le tenir</h2>
+    <p>Selon service-public.fr, le micro-entrepreneur doit tenir à jour un livre des recettes, <strong>quelle que soit la nature de son activité</strong>. La page officielle distingue le cas des commerçants et celui des professions libérales, mais le livre des recettes figure dans les deux.</p>
+    <p>Si vous bénéficiez de la franchise en base de TVA, la page demande en plus un registre des achats par année et un livre journal jour par jour. Voir la section consacrée au registre des achats.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="mentions">
+    <h2 id="mentions">Mentions obligatoires</h2>
+    <p>Pour un commerçant, service-public.fr indique que chaque recette doit être enregistrée chronologiquement avec :</p>
+    <ul>
+      <li>le <strong>montant</strong> de la recette et son <strong>origine</strong>, c'est-à-dire l'identité du client (ou de la société mandataire) ;</li>
+      <li>le <strong>mode de règlement</strong> (chèque, espèces ou autre) ;</li>
+      <li>les <strong>références des pièces justificatives</strong>, par exemple le numéro de facture ou de note.</li>
+    </ul>
+    <p>Trois autres règles s'appliquent :</p>
+    <ul>
+      <li>vous faites le <strong>total de vos recettes tous les 3 mois</strong> ;</li>
+      <li>pour les ventes au détail et les services rendus à des particuliers, vous pouvez noter les recettes de manière globale, en fin de journée, lorsque leur montant unitaire est inférieur à 76 € ;</li>
+      <li>vous devez conserver le livre des recettes <strong>10 ans</strong> à partir de la clôture de l'exercice comptable concerné, ainsi que les pièces justificatives.</li>
+    </ul>
+  </section>
+
+  <section class="panel" aria-labelledby="exemple">
+    <h2 id="exemple">Exemple de tableau</h2>
+    <p>Voici un exemple avec des données fictives. Les colonnes A à F reprennent les mentions ci-dessus. La colonne « Nature » n'est pas exigée par la loi : elle est utile pour vos totaux par type d'activité.</p>
+    <table class="ex">
+      <thead>
+        <tr>
+          <th scope="col">Date d'encaissement</th>
+          <th scope="col">Référence de la pièce</th>
+          <th scope="col">Client (identité)</th>
+          <th scope="col">Nature (facultatif)</th>
+          <th scope="col">Montant (€)</th>
+          <th scope="col">Mode de règlement</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>03/10/2026</td>
+          <td>F-2026-041</td>
+          <td>Client fictif A</td>
+          <td>Prestation de conseil</td>
+          <td class="num">450,00</td>
+          <td>Virement</td>
+        </tr>
+        <tr>
+          <td>12/10/2026</td>
+          <td>F-2026-042</td>
+          <td>Client fictif B</td>
+          <td>Création graphique</td>
+          <td class="num">280,00</td>
+          <td>Chèque</td>
+        </tr>
+        <tr>
+          <td>15/10/2026</td>
+          <td>F-2026-043</td>
+          <td>Client fictif C</td>
+          <td>Formation d'une journée</td>
+          <td class="num">900,00</td>
+          <td>Carte bancaire</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th scope="row" colspan="4">Total de la période</th>
+          <td class="num">1 630,00</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <section class="panel" aria-labelledby="methode">
+    <h2 id="methode">Méthode gratuite dans Excel</h2>
+    <h3>1. Créez la feuille « Recettes »</h3>
+    <p>Mettez ces titres en ligne 1, de A à F : <code>Date</code>, <code>Référence</code>, <code>Client</code>, <code>Nature</code>, <code>Montant</code>, <code>Mode de règlement</code>.</p>
+    <h3>2. Saisissez une ligne par encaissement</h3>
+    <p>Notez la date à laquelle l'argent est encaissé, pas la date de la facture. Mettez la colonne A au format date (jj/mm/aaaa) et la colonne E au format nombre avec deux décimales. Gardez les lignes dans l'ordre des dates.</p>
+    <h3>3. Calculez vos totaux avec des formules</h3>
+    <p>Total d'un mois (ici octobre 2026), à écrire dans une cellule libre :</p>
+    <pre><code>=SOMME.SI.ENS(E:E;A:A;"&gt;="&amp;DATE(2026;10;1);A:A;"&lt;"&amp;DATE(2026;11;1))</code></pre>
+    <p>Total d'un trimestre (ici le quatrième trimestre 2026, pour votre total tous les 3 mois) :</p>
+    <pre><code>=SOMME.SI.ENS(E:E;A:A;"&gt;="&amp;DATE(2026;10;1);A:A;"&lt;="&amp;DATE(2026;12;31))</code></pre>
+    <p>Total de l'année en cours : <code>=SOMME(E:E)</code>.</p>
+    <p>Si votre Excel est en anglais, remplacez <code>SOMME.SI.ENS</code> par <code>SUMIFS</code> et les points-virgules par des virgules.</p>
+    <h3>4. Gardez les pièces</h3>
+    <p>Rangez les factures et notes correspondant à chaque ligne, et conservez le fichier 10 ans.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="registre">
+    <h2 id="registre">Registre des achats</h2>
+    <p>Pour les commerçants et les fournisseurs de prestations d'hébergement, service-public.fr demande aussi un <strong>registre des achats</strong> : un récapitulatif chronologique, par année, du détail des achats de biens et de services. Il indique le mode de paiement et les références des pièces justificatives (factures, notes).</p>
+    <p>Pour un micro-entrepreneur en franchise en base de TVA, la même page demande un registre par année (détail des achats) et un livre journal présentant jour par jour le détail des recettes.</p>
+    <p>Si vous êtes prestataire de services, la page que nous avons consultée ne tranche pas explicitement votre cas. Vérifiez-le sur service-public.fr ou auprès de votre expert-comptable.</p>
+    <p>Dans Excel, une feuille « Achats » peut reprendre les colonnes Date, Fournisseur, Nature, Montant, Mode de paiement et Référence de la pièce.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="erreurs">
+    <h2 id="erreurs">Erreurs fréquentes</h2>
+    <ul>
+      <li><strong>Noter la facture au lieu de l'encaissement.</strong> Le livre porte sur les recettes encaissées. Une facture payée dans trois semaines n'apparaît qu'au moment du paiement.</li>
+      <li><strong>Oublier la référence de la pièce.</strong> Sans numéro de facture ou de note, la ligne ne permet pas de retrouver le justificatif.</li>
+      <li><strong>Réécrire une ligne déjà saisie.</strong> service-public.fr indique qu'une fois enregistrées, les écritures ne peuvent pas être modifiées. Évitez donc de corriger à la main sans trace ; demandez à votre expert-comptable comment corriger une erreur.</li>
+      <li><strong>Oublier le total tous les 3 mois.</strong></li>
+      <li><strong>Inscrire une information fausse.</strong> service-public.fr précise que le faux et l'usage de faux sont punis de jusqu'à 3 ans d'emprisonnement et 45 000 € d'amende.</li>
+      <li><strong>Ignorer le plafond de chiffre d'affaires.</strong> Pour 2026, il est de 83 600 € pour les prestations de services et les activités libérales, et de 203 100 € pour la vente de marchandises (service-public.fr). Un total cumulé permet de le suivre.</li>
+    </ul>
+  </section>
+
+  <section class="panel" aria-labelledby="suite">
+    <h2 id="suite">Aller plus loin : le classeur tout prêt</h2>
+    <p>Si vous préférez ne pas construire le fichier vous-même, le <a href="https://lesferay.gumroad.com/l/suivi-micro-2026" data-goatcounter-click="clic-boutique-guide-livre">Suivi micro-entrepreneur 2026</a> (Excel et Google Sheets, 14 €, achat unique) contient déjà :</p>
+    <ul>
+      <li>un onglet Recettes avec les colonnes décrites dans ce guide ;</li>
+      <li>un registre des achats ;</li>
+      <li>un tableau de bord mensuel, avec une estimation des cotisations, du CFP et du versement libératoire, et le net estimé ;</li>
+      <li>le tableau des déclarations avec le montant et la date limite de chaque période ;</li>
+      <li>des alertes sur le plafond de chiffre d'affaires et sur le seuil de TVA ;</li>
+      <li>un modèle de facture avec la mention « TVA non applicable, art. 293 B du CGI ».</li>
+    </ul>
+    <p>Il ne se connecte pas à votre banque, il n'émet pas de facture électronique au format réglementaire et il ne remplace ni votre déclaration sur le site de l'URSSAF, ni votre expert-comptable.</p>
+    <p>Pour les échéances et une estimation de votre revenu net, utilisez l'<a href="index.html">outil gratuit</a>.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="faq">
+    <h2 id="faq">Questions fréquentes</h2>
+
+    <h3>Le livre des recettes est-il obligatoire pour un micro-entrepreneur ?</h3>
+    <p>Oui. Selon service-public.fr, le micro-entrepreneur doit tenir à jour un livre des recettes, quelle que soit la nature de son activité. La même page indique qu'il n'y a pas de sanction pour une non-tenue, mais qu'une fausse inscription est punie pénalement.</p>
+
+    <h3>Peut-on tenir son livre des recettes sur Excel ?</h3>
+    <p>Oui. service-public.fr indique que le livre des recettes peut être tenu sous format électronique. Il faut toutefois garder les mentions exigées : date, montant, origine, mode de règlement et référence de la pièce.</p>
+
+    <h3>Faut-il noter les factures ou les encaissements ?</h3>
+    <p>Les encaissements. Le livre des recettes porte sur les recettes encaissées. Notez la date du paiement et mettez le numéro de la facture dans la colonne des références.</p>
+
+    <h3>Pendant combien de temps faut-il garder le livre des recettes ?</h3>
+    <p>10 ans à partir de la clôture de l'exercice comptable auquel les informations appartiennent, selon service-public.fr. Les pièces justificatives suivent le même délai.</p>
+
+    <h3>Faut-il aussi tenir un registre des achats ?</h3>
+    <p>Cela dépend de votre activité. service-public.fr le demande aux commerçants et aux fournisseurs de prestations d'hébergement, ainsi qu'aux micro-entrepreneurs en franchise en base de TVA. Si vous êtes prestataire de services, vérifiez votre cas sur la page officielle ou auprès d'un expert-comptable.</p>
+  </section>
+
+  <section class="panel small" aria-labelledby="sources">
+    <h2 id="sources">Sources</h2>
+    <ul>
+      <li>service-public.fr, « Obligations comptables du micro-entrepreneur » (livre des recettes, registre des achats, conservation de 10 ans, seuil de 76 €, franchise en base de TVA). Page indiquant « Vérifié le 07 septembre 2026 », consultée le 19 octobre 2026 : <a href="https://entreprendre.service-public.gouv.fr/vosdroits/F23266">entreprendre.service-public.gouv.fr/vosdroits/F23266</a></li>
+      <li>service-public.fr, régime micro-entrepreneur (plafonds de chiffre d'affaires 2026) : <a href="https://entreprendre.service-public.gouv.fr/vosdroits/F23267">entreprendre.service-public.gouv.fr/vosdroits/F23267</a></li>
+    </ul>
+    <p class="muted">Ce guide est une information générale. Il ne constitue pas un conseil juridique, fiscal ou comptable.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><a href="index.html">Retour à l'outil gratuit</a>. Sans publicité, sans cookie et sans compte. Mesure d'audience anonyme avec GoatCounter. Cet outil n'est pas édité, validé ni affilié à l'URSSAF, à l'administration fiscale ou à l'État.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Le livre des recettes est-il obligatoire pour un micro-entrepreneur ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Selon service-public.fr, le micro-entrepreneur doit tenir à jour un livre des recettes, quelle que soit la nature de son activité. La même page indique qu'il n'y a pas de sanction pour une non-tenue, mais qu'une fausse inscription est punie pénalement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Peut-on tenir son livre des recettes sur Excel ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. service-public.fr indique que le livre des recettes peut être tenu sous format électronique. Il faut toutefois garder les mentions exigées : date, montant, origine, mode de règlement et référence de la pièce."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Faut-il noter les factures ou les encaissements ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les encaissements. Le livre des recettes porte sur les recettes encaissées. Notez la date du paiement et mettez le numéro de la facture dans la colonne des références."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pendant combien de temps faut-il garder le livre des recettes ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10 ans à partir de la clôture de l'exercice comptable auquel les informations appartiennent, selon service-public.fr. Les pièces justificatives suivent le même délai."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Faut-il aussi tenir un registre des achats ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cela dépend de votre activité. service-public.fr le demande aux commerçants et aux fournisseurs de prestations d'hébergement, ainsi qu'aux micro-entrepreneurs en franchise en base de TVA. Si vous êtes prestataire de services, vérifiez votre cas sur la page officielle ou auprès d'un expert-comptable."
+      }
+    }
+  ]
+}
+</script>
+
+<script data-goatcounter="https://micro-echeances.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
